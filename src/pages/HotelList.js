@@ -37,58 +37,67 @@ const mockData = [
 export default function HotelList() {
 
   const [navigate, setNavigate] = useState(false);
+  const [showHotelList, setShowHotelList] = useState(true);
 
   function handleNavigation(){
     setNavigate(true);
+    setShowHotelList(false)
 
     // if (setNavigate){
     //   <HotelDescription/>
     // }
   }
+  
 
 
   return (
+    
     <>
-    <h1>HOTELS LIST</h1>
+    {showHotelList ?
+   <>
+   <h1>HOTELS LIST</h1>
 
-      <table border={2}>
-        <thead>
-            <th>Item</th>
-            <th>thumbnail Image</th>
-            <th>name of the hotel</th>
-            <th>shortDescription</th>
-            <th>city</th>
-            <th>Pool ?</th>
-            <th>Experience Level</th>
-            <th>Price</th>
-            <th>Action</th>
-        </thead>
-        <tbody>
+<table border={2}>
+<thead>
+    <th>Item</th>
+    <th>thumbnail Image</th>
+    <th>name of the hotel</th>
+    <th>shortDescription</th>
+    <th>city</th>
+    <th>Pool ?</th>
+    <th>Experience Level</th>
+    <th>Price</th>
+    <th>Action</th>
+</thead>
+<tbody>
+
+    {mockData.map(item => {
+      return (
+   
+        <tr>
         
-            {mockData.map(item => {
-              return (
-           
-                <tr>
-                
-                  <td>{item.id}</td>
-                <td>{item.thumbnail_image}</td>
-                <td><a role = "button" onClick={handleNavigation}>{item.hotel_name}</a></td>
-                <td>{item.description}</td>
-                <td>{item.city}</td>
-                <td>{item.pool}</td>
-                <td>{item.experience}</td>
-                <td>{item.price}</td>
-                <td><button>Book Now</button></td>
+          <td>{item.id}</td>
+        <td>{item.thumbnail_image}</td>
+        <td><a role = "button" onClick={handleNavigation}>{item.hotel_name}</a></td>
+        <td>{item.description}</td>
+        <td>{item.city}</td>
+        <td>{item.pool}</td>
+        <td>{item.experience}</td>
+        <td>{item.price}</td>
+        <td><button>Book Now</button></td>
 
-           
-                </tr>
-              
+   
+        </tr>
+      
 
-              )
-            })}
-       
-        </tbody>
-      </table>
+      )
+    })}
+
+</tbody>
+</table> </>: null
+    
+  }
+
       {navigate ? <HotelDescription /> : null}
     </>
   );
