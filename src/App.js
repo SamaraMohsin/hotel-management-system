@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import SearchForm from './pages/SearchForm';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HotelDescription from './pages/HotelDescription';
+import HotelList from './pages/HotelList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+      <SearchForm/>
+      <BrowserRouter>
+      <Routes>
+        {/* <Route element={<SearchForm/>} path = '/' ></Route> */}
+        <Route element={<HotelList/>} path = '/hotels' ></Route>
+        <Route element={<HotelDescription/>} path = '/hotel' ></Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

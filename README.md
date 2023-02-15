@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+Stories
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1)As a traveler, I can enter my search criteria and see a list of hotels that match my preferences so that I can book a stay for my trip.
 
-## Available Scripts
+AC1: The search form should have a drop down for the city (Karachi, Islamabad, Lahore), a drop down for the experience level (Budget, Business, Luxury),and  a check box for “Pool required”.  The form should have a button that says “Search” that will display a list of matching hotels.  
 
-In the project directory, you can run:
+AC2: Each hotel should be displayed on its own line.  Each line should have a thumbnail image of the hotel, the name of the hotel, the short description of the hotel, the city of the hotel, whether it has a pool, its experience level, the price of the hotel per night and a “Book Now” button.
 
-### `npm start`
+AC3: The product name will be linked to a Product Detail page that shows more information about the product.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+AC4: The search fields will remain at the top of the page so I can change their values and update my results.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##--------xxxxxxxxxxxxxxxxxxxx-----------------
 
-### `npm test`
+2)As a traveler, when I click the name of a hotel on the search results page I will be redirected to the Hotel Detail page for that hotel.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+AC1: Clicking the name of the hotel redirects the user to the hotel detail page.
 
-### `npm run build`
+AC2: The hotel detail page will show a large hotel image, the name of the hotel, its long description, the city it is in, its experience level, whether it has a pool and its price per night, and a “Book Now” button.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+AC3: The hotel detail page will have a “Return to Results” button that will take me back to my list of results.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##----------------------xxxxxxxxxxxxxxxxxxx------------------
+3)As a traveler, when I click the “Book Now” button on the search results or Hotel Detail page, the booking form is displayed where the traveler can enter their information, review the price and book their stay..
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+AC1: Clicking “Book Now” will display a form where the user can enter their name, address and email address, and the dates of their stay.
 
-### `npm run eject`
+AC2: When the traveler enters the dates of their stay the page will display the “Total Price” which is equal to the daily room rate times the number of nights in their stay times 12% for tax.  A separate “Tax” field will show the amount of the tax.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+AC3: A button on the booking form labeled “Book My Stay” will take the traveler to a confirmation page that says “Your stay has been booked.” and provides them with a summary of the important information.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+AC4: The booking form will have a “Cancel” button that will return me to the main search page.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+AC5: The booking confirmation page will have a “Start Over” button that will return me to the main search page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
