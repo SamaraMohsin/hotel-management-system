@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import {Checkbox} from "react"
 
 export default function SearchForm() {
@@ -16,6 +17,14 @@ export default function SearchForm() {
 
   function handlePool(e) {
     setPool(e.target.value);
+  }
+
+  const navigate = useNavigate()
+
+
+  
+  function handleSearch(){
+    navigate('/hotels')
   }
 
   return (
@@ -60,7 +69,7 @@ export default function SearchForm() {
         <span>No</span>
       </div>
 
-      <button type="submit">
+      <button onClick={handleSearch}>
         Search
       </button>
       </form>
